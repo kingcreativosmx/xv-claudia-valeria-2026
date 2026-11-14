@@ -92,7 +92,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #ff
 .event a,.music-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;gap:10px;padding:6px 13px;border-bottom:1px solid var(--brass);text-decoration:none;color:#f3d29b;font-weight:650;font-size:.79rem}
 .event a{margin-top:auto}
 .event a:hover,.music-link:hover{color:#fff0cc;border-color:#fff0cc}
-.details{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:left}
+.details{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
 .details article{padding:31px clamp(16px,3.6vw,39px)}
 .details article+article{border-left:1px solid var(--line)}
 .info-title{font:500 2rem/1.05 var(--serif);color:var(--paper);margin:9px 0 6px}
@@ -296,17 +296,11 @@ body{background:radial-gradient(ellipse at 50% 48%,#181010 0%,#0b0908 48%,#06050
         </article>
       </div>
     </section>
-    <section class="details reveal" aria-label="Vestimenta y música">
+    <section class="details reveal" aria-label="Código de vestimenta">
       <article>
         <h2 class="info-label">Código de vestimenta</h2>
         <p class="info-title">Formal</p>
         <p class="detail-note">Acorde a la ocasión. <strong>Por favor, reserva el color negro exclusivamente para la festejada.</strong></p>
-      </article>
-      <article>
-        <h2 class="info-label">Nuestra canción</h2>
-        <p class="info-title">Die With a Smile</p>
-        <p class="detail-note">Bruno Mars &amp; Lady Gaga</p>
-        <a class="music-link" href="https://www.youtube.com/watch?v=kPa7bsKwL-c" target="_blank" rel="noopener">Escuchar en YouTube <span class="arrow-out" aria-hidden="true"></span></a>
       </article>
     </section>
     <footer class="closing reveal">
@@ -321,8 +315,7 @@ body{background:radial-gradient(ellipse at 50% 48%,#181010 0%,#0b0908 48%,#06050
     <h2 id="music-panel-title">Música no disponible</h2>
     <button class="music-close" id="music-close" type="button">Cerrar</button>
   </div>
-  <p class="detail-note">Para escuchar la canción especial, abre el enlace. Si administras esta página, añade el archivo de audio autorizado «musica-claudia-valeria.mp3» en la raíz del repositorio.</p>
-  <a class="music-link" href="https://www.youtube.com/watch?v=kPa7bsKwL-c" target="_blank" rel="noopener">Escuchar en YouTube <span class="arrow-out" aria-hidden="true"></span></a>
+  <p class="detail-note">No se pudo reproducir la música. Comprueba la conexión y pulsa «Música» para intentarlo nuevamente.</p>
 </aside>
 <script>
   const timer = document.querySelector(".countdown");
