@@ -57,6 +57,23 @@ header{height:68px;position:sticky;top:0;z-index:30;display:flex;justify-content
  .hero{min-height:830px}.hero-visual{top:230px}.hero-copy{padding-top:45px}.hero-pre{font-size:17px}.hero-title h1{font-size:clamp(84px,23vw,116px)}.hero::before{inset:12px}.hero::after{inset:17px}.hero-date{font-size:9px}.hero-caption{right:24px;bottom:22px}.open-btn{padding:15px 17px}.ornate-heading h2{font-size:43px}.count-item{min-width:75px;padding:5px}.count-item strong{font-size:39px}.family-grid{grid-template-columns:1fr}.family-card p{font-size:28px}.event-grid{grid-template-columns:1fr;gap:22px}.venue-card{min-height:auto;padding:32px 22px}.dress{flex-direction:column;gap:13px;padding:24px 12px}.dress .dress-rule{width:80%;height:1px}.gift{grid-template-columns:1fr;text-align:center;padding:27px 25px;margin-top:70px}.gift-graphic{max-width:185px;margin:auto}.gift h2{font-size:46px}.gift p{font-size:24px}.gift .thanks{font-size:29px}.closing{padding-top:40px}.closing p{font-size:38px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.glitter{animation:none;display:none}.hero-visual img{animation:none}.js-ready .reveal{opacity:1;transform:none;transition:none}}
+
+/* V8 · Confirmación de asistencia al final de la invitación */
+.rsvp{position:relative;isolation:isolate;overflow:hidden;max-width:900px;margin:16px auto 0;padding:clamp(32px,5vw,58px) clamp(20px,6vw,72px) 48px;text-align:center;border:1px solid #c79b5b89;background:radial-gradient(ellipse at 50% 0%,#3e27176b 0%,transparent 65%),linear-gradient(130deg,#1a1010,#0d0909 70%);box-shadow:inset 0 0 0 7px #d8ac6615,0 22px 70px #0008}
+.rsvp::before,.rsvp::after{content:'❧';position:absolute;top:6px;font-size:40px;color:#c89d61;opacity:.8}
+.rsvp::before{left:12px}.rsvp::after{right:12px;transform:scaleX(-1)}
+.rsvp .mini-label{margin:0 0 12px}
+.rsvp h2{font:500 clamp(42px,6vw,66px)/1 var(--serif);color:var(--lightgold);margin:0 0 18px}
+.rsvp .rsvp-message{font:italic 500 clamp(23px,3.4vw,35px)/1.18 var(--serif);color:var(--cream);max-width:710px;margin:0 auto 28px}
+.rsvp .rsvp-flourish{color:var(--gold);font-size:20px;letter-spacing:.3em;margin:0 auto 24px}
+.rsvp-button{display:inline-flex;gap:13px;align-items:center;justify-content:center;min-width:min(100%,330px);max-width:100%;padding:15px 22px;border:1.5px solid var(--gold);background:linear-gradient(155deg,#3f2a19,#1a100c);color:var(--lightgold);text-decoration:none;box-shadow:inset 0 0 0 4px #b98f3f17,0 9px 29px #0006;transition:background .2s ease, transform .2s ease}
+.rsvp-button:hover{background:#42301d;transform:translateY(-2px)}
+.rsvp-button .wa-icon{display:block;flex:none;width:31px;height:31px;color:#54d88c}
+.rsvp-button .rsvp-button-text{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left}
+.rsvp-button .rsvp-button-text strong{font:700 13px/1.3 var(--sans);letter-spacing:.04em}
+.rsvp-button .rsvp-button-text small{font:500 11px/1.3 var(--sans);color:#dfc9a2}
+.rsvp .rsvp-hint{font:500 11px/1.6 var(--sans);color:#c1ab8c;margin:15px 0 0}
+@media(max-width:520px){.rsvp{padding:40px 21px 34px}.rsvp h2{font-size:47px}.rsvp .rsvp-message{font-size:27px}.rsvp-button{width:100%;min-width:0}}
 </style>
 </head>
 <body id="inicio">
@@ -124,6 +141,21 @@ header{height:68px;position:sticky;top:0;z-index:30;display:flex;justify-content
 <div><span class="mini-label">Un detalle especial</span><h2 id="gift-title">Tu presencia es mi mejor regalo.</h2><p>Si deseas tener un detalle conmigo, agradeceré de corazón lluvia de sobres o algún obsequio relacionado con mi pasión por el básquetbol.</p><p class="thanks">¡Gracias por ser parte de este día tan especial!</p></div>
 </section>
 <footer class="closing reveal"><div class="crest" aria-hidden="true"><span>CV</span></div><div class="diamond" aria-hidden="true">✦ ─── ♡ ─── ✦</div><p>Tu presencia hará que este día sea aún más especial.</p><p>¡Te espero para celebrar juntos esta noche inolvidable!</p><div class="footerline">Claudia Valeria · Mis XV años</div></footer>
+
+<section class="rsvp reveal" id="confirmacion" aria-labelledby="confirmacion-titulo">
+  <p class="mini-label">Un último detalle</p>
+  <h2 id="confirmacion-titulo">Confirma tu asistencia</h2>
+  <p class="rsvp-message">Será un placer acompañarlos en este momento tan especial para la familia.</p>
+  <div class="rsvp-flourish" aria-hidden="true">✦ ─── ♡ ─── ✦</div>
+  <a class="rsvp-button" href="https://wa.me/527841055513?text=Ser%C3%A1%20un%20placer%20acompa%C3%B1arlos%20en%20este%20momento%20tan%20especial%20para%20la%20familia%2C%20confirmo%20mi%20asistencia." target="_blank" rel="noopener noreferrer" aria-label="Confirmo mi asistencia por WhatsApp al 784 105 5513">
+    <svg class="wa-icon" viewBox="0 0 32 32" role="img" aria-label="WhatsApp" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3.5a12.3 12.3 0 0 0-10.5 18.7L3.6 28.4l6.4-1.9A12.3 12.3 0 1 0 16 3.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M11.5 10.2c-.4-.7-1.2-.6-1.7-.1-.7.8-.9 1.9-.6 3 1.3 4.6 5 7.9 9.5 9.3 1.2.4 2.4.1 3.1-.8.5-.6.5-1.3-.2-1.7l-3.1-1.6c-.6-.3-.9-.2-1.3.3l-.9 1.1a10.8 10.8 0 0 1-5-5l1.2-1c.4-.4.5-.7.2-1.2l-1.4-3.2Z" fill="currentColor"/>
+    </svg>
+    <span class="rsvp-button-text"><strong>Confirmo mi asistencia</strong><small>WhatsApp · 784 105 5513</small></span>
+  </a>
+  <p class="rsvp-hint">Al tocar el botón se abrirá WhatsApp con el mensaje listo para enviar.</p>
+</section>
 </div>
 </div>
 </main>
